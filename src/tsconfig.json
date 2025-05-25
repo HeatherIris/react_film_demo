@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    /* React + Vite 常规配置 */
+    "jsx": "react-jsx",
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    /* （可选）路径别名 */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Vite 不用 tsc emit JS */
+    "noEmit": true
+  },
+  "include": ["src", "routes.tsx"]   // routes 后缀若改成 .ts/.tsx 对应调整
+}
