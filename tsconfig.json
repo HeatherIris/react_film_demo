@@ -18,5 +18,5 @@
     /* Vite 不用 tsc emit JS */
     "noEmit": true
   },
-  "include": ["src", "routes.tsx"]   // routes 后缀若改成 .ts/.tsx 对应调整
+  "include": ["src", "routes.tsx", "vite-env.d.ts"]   // routes 后缀若改成 .ts/.tsx 对应调整
 }
