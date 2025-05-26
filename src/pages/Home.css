@@ -1,0 +1,93 @@
+:root {
+  --container-max-width: 1200px;
+  --gap: 1.5rem;
+  --radius: 1rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --font-heading: 2rem;
+  --font-subtitle: 0.875rem;
+  --color-text: #333;
+  --color-muted: #666;
+  --color-bg: #fff;
+  --color-error: #e53e3e;
+}
+
+.home-page {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-text);
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: var(--gap);
+  text-align: center;
+}
+
+.status {
+  text-align: center;
+  margin-top: var(--gap);
+  font-size: 1rem;
+}
+
+.status--error {
+  color: var(--color-error);
+}
+
+/* Grid 布局 */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+}
+
+/* 卡片 */
+.movie-card {
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 卡片内容 */
+.movie-content {
+  padding: 1rem;
+}
+
+.movie-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.movie-date {
+  font-size: var(--font-subtitle);
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* 文本截断三行 */
+.movie-overview {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
